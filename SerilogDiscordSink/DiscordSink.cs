@@ -9,7 +9,7 @@ namespace SerilogDiscordSink
 
 		public DiscordSink(SerilogDiscordOptions options)
 		{
-			_logQueue = new DiscordLogQueue(options);
+			_logQueue = new DiscordLogQueue(options, new DiscordLogMessageFactory());
 		}
 
 		public void Emit(LogEvent logEvent)
